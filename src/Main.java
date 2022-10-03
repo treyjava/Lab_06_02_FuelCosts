@@ -29,15 +29,16 @@ public class Main
             gasPrice = in.nextDouble();
             in.nextLine();
         }
-        double gasMile = gasPrice / 100;
-        System.out.println("The cost per 100 miles in your car is " + gasMile);
-        System.out.println();
-
         else
         {
             trash = in.nextLine();
             System.out.println("You entered an invalid number " + trash + ", please try again");
         }
+        double per100Miles = 100 / milesGallon * gasPrice;
+        System.out.println("The cost per 100 miles is " + per100Miles);
+
+        double gasDistance = gasTank * milesGallon;
+        System.out.println("The car can go " + gasDistance + " miles ");
 
     }
 }
