@@ -17,14 +17,27 @@ public class Main
             gasTank = in.nextDouble();
             in.nextLine();
         }
+        else
+        {
+            trash = in.nextLine();
+            System.out.println("You entered an invalid number " + trash + ", please try again");
+            System.exit(0);
+        }
+
         System.out.print("Enter the fuel efficiency in miles per gallon: ");
-        if (in.hasNextDouble());
+        if (in.hasNextDouble())
         {
             milesGallon = in.nextDouble();
             in.nextLine();
         }
+        else
+        {
+            trash = in.nextLine();
+            System.out.println("You entered an invalid number " + trash + ", please try again");
+            System.exit(0);
+        }
         System.out.print("Enter the price of gas per gallon: ");
-        if (in.hasNextDouble());
+        if (in.hasNextDouble())
         {
             gasPrice = in.nextDouble();
             in.nextLine();
@@ -33,6 +46,7 @@ public class Main
         {
             trash = in.nextLine();
             System.out.println("You entered an invalid number " + trash + ", please try again");
+            System.exit(0);
         }
         double per100Miles = 100 / milesGallon * gasPrice;
         System.out.println("The cost per 100 miles is " + per100Miles);
